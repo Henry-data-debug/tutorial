@@ -162,18 +162,46 @@ section { padding: 40px 0; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
-    /* Minimize font sizes */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.8rem; }
-    p { font-size: 1rem; }
+    /* Adjust font sizes for better readability */
+    h1 { font-size: 2.2rem; /* Slightly larger for impact */ }
+    h2 { font-size: 2rem; /* Slightly larger for section titles */ }
+    h3 { font-size: 1.2rem; /* Adjust as needed */ }
+    p { font-size: 1.1rem; /* More readable paragraph text */ }
+    .btn { font-size: 1rem; /* Smaller button text */ }
 
-    /* Reduce padding and margins */
-    .container { padding: 10px; }
-    .navbar { padding: 0.5rem; }
+    /* Improve navbar layout */
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        padding: 0.5rem;
+    }
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width for links */
+        padding: 0.5rem 0; /* Add some spacing */
+    }
+    .navbar ul li {
+        text-align: left; /* Align links to the left */
+    }
+    .navbar ul li a {
+        padding: 0.75rem 1rem; /* Adjust link padding */
+    }
+
+    /* Adjust container padding */
+    .container { padding: 15px; /* Less padding on the sides */ }
 
     /* Adjust image sizes */
-    .service-gallery img { max-width: 80%; }
+    .service-gallery img { max-width: 100%; /* Images take full width */ }
 
     /* Reduce container widths */
-    .section-content { max-width: 100%; }
+    .section-content { max-width: 100%; /* Full width content */ }
+
+    /* Contact Section Adjustments */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack form and info */
+        gap: 20px; /* Add spacing */
+    }
+    .contact-info {
+        text-align: center; /* Center contact info */
+    }
 }
